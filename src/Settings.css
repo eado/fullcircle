@@ -1,0 +1,77 @@
+input {
+    font-size: 1em;
+    background: none;
+    font-family: inherit !important;
+    color: inherit;
+    font-weight: bold;
+    border: none;
+    outline: inherit;
+    border-bottom: 2px solid white;
+}
+
+h4 {
+    margin: 0;
+    margin-top: 20px;
+    /* padding: 0 */
+    font-weight: normal;
+}
+
+.settings {
+    overflow-y: scroll;
+    width: 90vw;
+    height: 80vh;
+}
+
+.smalltext {
+    font-size: 0.5em;
+}
+
+.pfp {
+    width: 10vmax;
+    height: 10vmax;
+    border-radius: 5vmax;
+    object-fit: cover;
+}
+
+.mentordiv {
+    white-space: nowrap;
+}
+
+.mentordiv input {
+    margin-left: 20px;
+}
+
+textarea {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    font-size: 0.75em;
+    width: 90%;
+    font-family: 'Raleway' !important;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+.dateinput {
+    background-color: #282c34 !important;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Raleway' !important;
+    display: inline;
+    position: relative;
+    width: fit-content;
+}
+
+button {
+    font-size: 0.75em;
+    background-color: #71cf6b;
+    border: none;
+    color: white;
+    margin-left: 20px;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: 'Raleway' !important;
+}

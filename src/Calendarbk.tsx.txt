@@ -1,0 +1,85 @@
+import './Calendar.css'
+
+const Calendar = () => {
+    return (<>
+        <h2>Calendar</h2>
+        <div className="calendardiv">
+            <table className="calendar">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Sunday <br /><b>12</b></td>
+                        <td>Monday <br /><b>13</b></td>
+                        <td>Tuesday <br /><b>14</b></td>
+                        <td>Wednesday <br /><b>15</b></td>
+                        <td>Thursday <br /><b>16</b></td>
+                        <td>Friday <br /><b>17</b></td>
+                        <td className="noright">Saturday <br /><b>18</b></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {[...Array(13).keys()].map(i => (<tr key={i}>
+                        <td className={(i === 12 ? "nobottom" : "")}>{(i + 7 < 13) ? `${String(i + 7)} am` : `${String((i + 7) - 12)} pm`}</td>
+                        {[...Array(7).keys()].map(j => {
+                            return <td key={j} className={(j === 6 ? "noright " : "") + (i === 12 ? "nobottom" : "")}>
+                                <div></div>
+                            </td>
+                        })}
+                    </tr>))}
+                </tbody>
+            </table>
+        </div>
+    </>)
+}
+
+export default Calendar
+
+
+.calendar {
+    height: 80vh;
+    border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 1000px;
+}
+.calendar tbody tr td, .calendar thead tr td {
+    padding: 10px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    /* width: 30%; */
+    height: 7vh;
+    font-size: 0.75em;
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
+    /* display: flex; */
+}
+
+@media screen and (max-width: 500px) {
+    .calendar tbody tr td, .calendar thead tr td {
+        width: 30vw
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .calendar tbody tr td, .calendar thead tr td {
+        width: 10vw
+    }
+}
+
+.calendar .noright {
+    border-right: none
+}
+
+.calendar .nobottom {
+    border-bottom: none
+}
+
+.calendardiv {
+    /* display: inline; */
+    /* white-space: nowrap; */
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 85vw;
+    height: 60vh;
+    margin-left: 5vw
+}
+

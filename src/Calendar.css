@@ -1,0 +1,135 @@
+.applist {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.appointment {
+    background-color: #71cf6b;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.75em;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.appointment span {
+    right: 10px;
+    position: absolute;
+    top: calc(50% - 0.75em);
+}
+
+.appointment p {
+    padding: 0;
+    margin: 0;
+}
+
+.upcoming {
+    display: inline-block;
+}
+
+@media screen and (max-width: 500px) {
+    .upcoming {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .upcoming {
+        width: 50%;
+    }
+}
+
+.calendardiv {
+    /* display: inline; */
+    /* white-space: nowrap; */
+    overflow-y: scroll;
+    width: 90vw;
+    height: 60vh;
+    /* position: relative; */
+    display: flex;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.calendardiv tbody, .calendardiv tr {
+    width: 100%;
+}
+
+.calendardiv tr td {
+    height: 5vh;
+    border-bottom: 1px dashed lightgray;
+    overflow: hidden;
+}
+
+.timetd {
+    width: 20vw;
+}
+.scheduletd {
+    width: 80vw;
+    position: relative;
+}
+
+.scheduletd div {
+    position: absolute;
+    width: 100%;
+}
+
+.backarrow {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.dateinput {
+    background-color: #282c34 !important;
+    border: none;
+    color: white;
+    font-size: 1em;
+    font-family: 'Raleway' !important;
+    display: inline;
+    position: relative;
+    width: fit-content;
+}
+
+.inputs li {
+    display: inline;
+    position: relative;
+}
+
+.inputs button {
+    font-size: 1em;
+    background-color: #71cf6b;
+    border: none;
+    color: white;
+    margin-left: 20px;
+    border-radius: 100px;
+    padding: 10px;
+    font-family: 'Raleway' !important;
+}
+ 
+.inputs {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.inputdiv {
+    display: inline;
+}
+
+.errormessage {
+    font-size: 0.5em;
+    margin: 0;
+    color: red;
+}
+
+.selected {
+    background-color: rgb(126, 126, 126);
+}
+
+.blocked {
+    background-color: rgb(161, 26, 26);
+}
