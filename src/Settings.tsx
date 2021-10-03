@@ -13,7 +13,7 @@ const Settings = () => {
     const [user, suser] = useState({} as any)
 
     const [every, se] = useState("")
-    const [dayweek, sdw] = useState("Monday")
+    const [dayweek, sdw] = useState("Sunday")
     const [fromTime, sft] = useState(0)
     const [toTime, stt] = useState(0)
     const [date, sd] = useState(new Date())
